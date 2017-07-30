@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酒仙网后台</title>
+    <style>
+        html, body {
+            font-family: Microsoft YaHei, "SimSun", "宋体";
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        body {
+            padding-top: 70px;
+        }
+        table,th{
+            text-align: center !important;
+        }
+    </style>
+    <link rel="stylesheet" href="../../public/bs/css/bootstrap.css">
+    <script src="../../public/js/jquery-1.11.3.min.js"></script>
+    <script src="../../public/js/jquery.toggle.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/holder.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">酒仙网后台</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">后台管理 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">admin</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#myModal" data-toggle="modal">修改密码</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--模态框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">管理员密码修改:</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="from-group">
+                            <label for="oldPassword">旧密码:</label>
+                            <input type="password" class="form-control" id="oldPassword">
+                        </div>
+                        <div class="from-group">
+                            <label for="newPassword">新密码:</label>
+                            <input type="password" class="form-control" id="newPassword">
+                        </div>
+                        <div class="from-group">
+                            <label for="repeatPassword">重复新密码:</label>
+                            <input type="password" class="form-control" id="repeatPassword">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                               aria-expanded="true" aria-controls="collapseOne">
+                                会员管理
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                         aria-labelledby="headingOne">
+                        <div class="list-group">
+                            <a href="index.html" class="list-group-item">会员查看</a>
+                            <a href="add.html" class="list-group-item">会员增加</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                广告管理
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="list-group">
+                            <a href="" class="list-group-item">广告查看</a>
+                            <a href="" class="list-group-item">广告增加</a>
+                            <a href="" class="list-group-item">广告修改</a>
+                            <a href="" class="list-group-item">广告删除</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                分类管理
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingThree">
+                        <div class="list-group">
+                            <a href="" class="list-group-item">分类查看</a>
+                            <a href="" class="list-group-item">分类增加</a>
+                            <a href="" class="list-group-item">分类修改</a>
+                            <a href="" class="list-group-item">分类删除</a>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="heading4">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                品牌管理
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                        <div class="list-group">
+                            <a href="" class="list-group-item">品牌查看</a>
+                            <a href="" class="list-group-item">品牌增加</a>
+                            <a href="" class="list-group-item">品牌修改</a>
+                            <a href="" class="list-group-item">品牌删除</a>
+                        </div>
+                    </div>
+                </div>
+                <!--商品管理-->
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="heading5">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                                商品管理
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading5">
+                        <div class="list-group">
+                            <a href="" class="list-group-item">商品查看</a>
+                            <a href="" class="list-group-item">商品增加</a>
+                            <a href="" class="list-group-item">商品修改</a>
+                            <a href="" class="list-group-item">商品删除</a>
+                        </div>
+                    </div>
+                </div>
+                <!--评论管理-->
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="heading6">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                                评论管理
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading6">
+                        <div class="list-group">
+                            <a href="" class="list-group-item">评论查看</a>
+                            <a href="" class="list-group-item">评论增加</a>
+                            <a href="" class="list-group-item">评论修改</a>
+                            <a href="" class="list-group-item">评论删除</a>
+                        </div>
+                    </div>
+                </div>
+                <!--订单管理-->
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="heading7">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                                订单管理
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse7" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading7">
+                        <div class="list-group">
+                            <a href="" class="list-group-item">订单查看</a>
+                            <a href="" class="list-group-item">订单增加</a>
+                            <a href="" class="list-group-item">订单修改</a>
+                            <a href="" class="list-group-item">订单删除</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <table class="table table-striped table-bordered table-hover table-">
+                <tr>
+                    <th>编号</th>
+                    <th>用户</th>
+                    <th>密码</th>
+                    <th>注册</th>
+                    <th>修改</th>
+                    <th>删除</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>user</td>
+                    <td>1007</td>
+                    <td>2017-7-31</td>
+                    <td><a href="">修改</a></td>
+                    <td><a href="">删除</a></td>
+                </tr>
+            </table>
+            <ul class="pagination pagination-lg pull-right ">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
