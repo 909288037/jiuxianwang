@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            font-family: Microsoft YaHei, "SimSun", "宋体";
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding-top: 70px;
+        }
+        .login{
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -250px;
+            background-color: #ccc;
+        }
+    </style>
+    <link rel="stylesheet" href="../public/bs/css/bootstrap.css">
+    <script src="../public/js/jquery-1.11.3.min.js"></script>
+    <script src="../public/js/jquery.toggle.js"></script>
+    <script src="../public/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="panel panel-primary login">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <img src="../public/images/logo.png" alt="">
+            </div>
+        </div>
+        <div class="panel-body">
+            <form action="index.html" method="post">
+                <div class="form-group">
+                    <label for="account">账号:</label>
+                    <input type="text" class="form-control" placeholder="请输入账号" id="account">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码:</label>
+                    <input type="password" class="form-control" placeholder="请输入密码" id="password">
+                </div>
+                <div class="form-group text-center">
+                    <input type="submit" value="登录" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
