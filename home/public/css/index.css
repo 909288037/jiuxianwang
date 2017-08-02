@@ -2,7 +2,6 @@ html,body,ul{
     margin: 0;
     padding: 0;
     font-family: "Microsoft YaHei";
-    background-color: #F9F9F9;
     font-size: 12px;
     color: #999999;
 }
@@ -11,6 +10,8 @@ h1,h2,h3,h4,h5,h6,p,span{
     padding: 0;
 }
 li {
+    margin: 0;
+    padding: 0;
     list-style: none;
 
 }
@@ -27,8 +28,8 @@ a:hover {
     color: #cc0000;
 }
 /*清除浮动*/
-.clearfix::after {
-    content: ".";
+.clearfix:after {
+    content: "";
     clear: both;
     display: block;
     overflow: hidden;
@@ -49,6 +50,9 @@ a:hover {
 }
 .red-color {
     color: #cc0000;
+}
+body{
+    background-color: #f9f9f9;
 }
 .top-left{
     float: left;
@@ -187,12 +191,17 @@ a:hover {
     margin-top: 30px;
 }
 /*导航栏&侧边分类导航*/
+.navBox{
+    position: relative;
+    height: 470px;
+}
 .navWrap{
     position: relative;
     width: 100%;
     height: 34px;
     line-height: 34px;
     background-color: #990000;
+    z-index: 10;
 }
 .nav-l li{
     float: left;
@@ -241,9 +250,27 @@ a:hover {
     color: #333;
     font-weight: normal;
 }
-.pic1 .public-24{
-    background-position: -73px -260px;
+.nav-l-side li h3 i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
     margin-right: 10px;
+}
+.pic1 .public-24{
+    background-position: -69px -256px;
+}
+.pic2 .public-24{
+    background-position: 4px -98px;
+}
+.pic3 .public-24{
+    background-position: -16px -101px;
+}
+.pic4 .public-24{
+    background-position: -37px -97px;
+}
+.pic5 .public-24{
+    background-position: -79px -97px;
 }
 .nav-l-side li p a{
     padding: 0 4px;
@@ -322,8 +349,7 @@ a:hover {
 /*-----轮播图-----*/
 .slide{
     position: absolute;
-    top: 34px;
-    z-index: -1;
+    top: 0px;
     width: 100%;
     overflow: hidden;
 }
@@ -413,4 +439,174 @@ a:hover {
 }
 .active{
     background-color: #bd142a !important;
+}
+/*主体广告&公告信息&促销信息*/
+.mainWrap{
+    padding-top: 10px;
+}
+.mainLeft{
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/*活动分类列表*/
+.mainLeft-nav ul{
+    position: relative;
+    width: 920px;
+}
+.mainLeft-nav ul li{
+    width: 183px;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ececec;
+    border-top: 2px solid #ececec;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+.mainLeft-nav .lastLi{
+    position: absolute;
+    left: 735px;
+}
+.w .on{
+    border-top: 2px solid #c00;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+/*活动分类列表商品*/
+.mainMid{
+    width: 920px;
+    border: 1px solid #ececec;
+    border-top: none;
+    background-color: #fff;
+    display: none;
+    box-sizing: border-box;
+}
+.mainMidWrap{
+    width: 910px;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.mainMid-item{
+}
+.mainMid-item li{
+    float: left;
+    width: 182px;
+    padding-top: 20px;
+}
+.indexTabPic{
+    padding: 0 11px;
+}
+.indexTabTit{
+    padding: 0 6px;
+}
+.indexTabTit>a{
+    display: inline-block;
+    width: 170px;
+    color: #666666;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.indexTabTit>a:hover{
+    color: #cc0001;
+}
+.indexTabTitPrice{
+    padding: 0 6px;
+}
+/*右边新闻信息&轮播广告*/
+.mainRight{
+    width: 270px;
+    height: 500px;
+    float: right;
+}
+.mainRight-info {
+    width: 270px;
+    position: relative;
+}
+.mainRight-info ul{
+    width: 270px;
+}
+.s2{
+    position: absolute;
+    top: 0;
+    left: 134px;
+    width: 133px;
+}
+.mainRight-info>ul>li{
+    float: left;
+    width: 134px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    border: 1px solid #ececec;
+    border-top: 2px solid #ececec;
+    cursor: pointer;
+}
+.mainRight-info-Notice{
+    padding-top: 10px;
+    border: 1px solid #ececec;
+    border-top: none;
+}
+.indexTabNewCon{
+    display: none;
+}
+.mainRight-info-Notice ul li{
+    float: left;
+    width: 114px;
+    margin-left: 10px;
+    line-height: 28px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.mainRight-info-Notice ul li a{
+    color: #666;
+}
+.mainRight-info-Notice ul li a:hover{
+    color: #cc0000;
+}
+/*小轮播图*/
+.mainRight-slide{
+    position: relative;
+    width: 268px;
+    overflow: hidden;
+}
+.slideBox{
+    margin-top: 10px;
+    border: 1px solid #ececec;
+}
+.slide1{
+    width: 900px;
+}
+.slide1 li{
+    float: left;
+
+}
+.slideIndex{
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+}
+.slideIndex li{
+    float: left;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    background-color: #cccccc;
+    margin: 0 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slideIndex>.bg{
+    background-color: #6d81ae;
 }

@@ -13,6 +13,8 @@ $(window).ready(function () {
     var timer;
     var index = 0;
     clearInterval(timer);
+    //默认显示第一张
+    slideLi.eq(index).stop().fadeIn().siblings().stop().fadeOut();
     //自动轮播
     timer = setInterval(autoPlay,3000);
     //鼠标触摸停止轮播，离开继续
@@ -24,6 +26,7 @@ $(window).ready(function () {
     });
     //触摸导航点换图
     navLi.on("mouseenter",function () {
+        clearInterval(timer);
         index = $(this).index();
         slideLi.eq(index).stop().fadeIn().siblings().stop().fadeOut();
         navLi.eq(index).addClass('active').siblings().removeClass('active');
@@ -37,4 +40,18 @@ $(window).ready(function () {
         slideLi.eq(index).fadeIn().siblings().fadeOut();
         navLi.eq(index).addClass('active').siblings().removeClass('active');
     }
+//    活动tab切换功能
+    $(".mainMid").first().show();
+    $(".mainLeft-nav ul li").on("mouseenter",function () {
+        $(this).addClass("on").siblings().removeClass("on");
+         idx = $(this).index();
+        $(".mainMid").eq(idx).show().siblings(".mainMid").hide();
+    })
+//    右边信息tab切换
+    $(".indexTabNewCon").first().show();
+    $(".mainRight-info>ul>li").on("mouseenter",function () {
+        $(this).addClass("on").siblings().removeClass("on");
+        idx = $(this).index()
+        $(".indexTabNewCon").eq(idx).show().siblings(".indexTabNewCon").hide();
+    })
 });
