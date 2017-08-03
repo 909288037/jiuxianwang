@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>酒仙网</title>
-    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="../public/bs/css/bootstrap.css">
     <link rel="icon" href="public/images/favicon.ico">
+    <link rel="stylesheet" href="public/css/index.css">
     <script src="../public/js/jquery-1.11.3.min.js"></script>
+    <script src="../public/js/bootstrap.js"></script>
     <script src="../public/js/jquery.toggle.js"></script>
     <script src="public/js/index.js"></script>
 </head>
@@ -1428,49 +1430,165 @@
                     </div>
                 </div>
                 <!--小轮播图-->
-                <div class="mainRight-slide">
-                    <div class="slideBox">
-                        <ul class="slide1 clearfix">
-                            <li>
-                                <a href=""><img src="public/images/057c2b9faf204dfe95b9ae88823b404c.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="public/images/2bbd257c25464d38a4e1e49e43af1ec0.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="public/images/edcf771579db4dd8984a454df81ef39b.jpg" alt=""></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <ul class="slideIndex">
-                        <li class="bg"></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                <div id="carousel-example-generic" class="carousel slide mainRight-slide" data-ride="carousel">
+                    <!-- Indicators -->
+                        <div class="slideBox">
+                            <ul class="slide1 clearfix carousel-inner" role="listbox">
+                                <li class="item active">
+                                    <a href=""><img src="public/images/057c2b9faf204dfe95b9ae88823b404c.png" alt=""></a>
+                                </li>
+                                <li class="item">
+                                    <a href=""><img src="public/images/2bbd257c25464d38a4e1e49e43af1ec0.png" alt=""></a>
+                                </li>
+                                <li class="item">
+                                    <a href=""><img src="public/images/edcf771579db4dd8984a454df81ef39b.jpg" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
                 </div>
-                <div class="mainRight-slide">
-                    <div class="slideBox">
-                        <ul class="slide1 clearfix">
-                            <li>
-                                <a href=""><img src="public/images/93b1d3e411e54d50ab5cfbe67b8d4b9f.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="public/images/f0e5a375927b40489f082164320a2e58.jpg" alt=""></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="public/images/5793fdf5cfa64cb5a8f35556509d1ca0.png" alt=""></a>
-                            </li>
-                        </ul>
+                <div id="carousel-example-generic2" class="carousel slide mainRight-slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <div class="mainRight-slide ">
+                        <div class="slideBox">
+                            <ul class="slide1 clearfix carousel-inner" role="listbox">
+                                <li class="item active">
+                                    <a href=""><img src="public/images/93b1d3e411e54d50ab5cfbe67b8d4b9f.jpg" alt=""></a>
+                                </li>
+                                <li class="item">
+                                    <a href=""><img src="public/images/f0e5a375927b40489f082164320a2e58.jpg" alt=""></a>
+                                </li>
+                                <li class="item">
+                                    <a href=""><img src="public/images/5793fdf5cfa64cb5a8f35556509d1ca0.png" alt=""></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+                        </ol>
                     </div>
-                    <ul class="slideIndex">
-                        <li class="bg"></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
                 </div>
             </div>
-            <div class="mainBottom">
+            <!--底部广告-->
+            <div class="mainBottom w">
+                <a href=""><img src="public/images/e84634febaca42b5b90976ea31761711.png" alt=""></a>
+                <a href=""><img src="public/images/17abdc36ec8e443685f1ef49a2ae9389.png" alt=""></a>
+                <a href=""><img src="public/images/9a01e2175d894adba42c46eaf60bda0c.png" alt=""></a>
+            </div>
+            <!--优惠推荐-->
+            <div class="recommend">
+                <div class="recommend-title">
+                    <div class="recommend-title-left">
+                        <i class="newIndexIcon"></i>
+                        <span>优惠推荐</span>
+                    </div>
+                    <div class="recommend-title-right">
+                        <ul >
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recommend-item">
+                    <div class="recommend-item-list">
+                        <ul class="clearfix">
+                            <li>
+                                <div class="indexTabPic">
+                                    <a href="">
+                                        <img src="public/images/a6c58fc81ed245d4b97b0d9afeab6bfa2.jpg" alt="" title="42°洋河蓝色经典海之蓝 480ml">
+                                    </a>
+                                </div>
+                                <div class="indexTabTit">
+                                    <a href="" title="52°全兴福运双星500ml">52°全兴福运双星500ml</a>
+                                </div>
+                                <div class="indexTabTitPrice">
+                                    <strong class="red-color">￥25.00</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="indexTabPic">
+                                    <a href="">
+                                        <img src="public/images/a6c58fc81ed245d4b97b0d9afeab6bfa2.jpg" alt="" title="42°洋河蓝色经典海之蓝 480ml">
+                                    </a>
+                                </div>
+                                <div class="indexTabTit">
+                                    <a href="" title="52°全兴福运双星500ml">52°全兴福运双星500ml</a>
+                                </div>
+                                <div class="indexTabTitPrice">
+                                    <strong class="red-color">￥25.00</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="indexTabPic">
+                                    <a href="">
+                                        <img src="public/images/a6c58fc81ed245d4b97b0d9afeab6bfa2.jpg" alt="" title="42°洋河蓝色经典海之蓝 480ml">
+                                    </a>
+                                </div>
+                                <div class="indexTabTit">
+                                    <a href="" title="52°全兴福运双星500ml">52°全兴福运双星500ml</a>
+                                </div>
+                                <div class="indexTabTitPrice">
+                                    <strong class="red-color">￥25.00</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="indexTabPic">
+                                    <a href="">
+                                        <img src="public/images/a6c58fc81ed245d4b97b0d9afeab6bfa2.jpg" alt="" title="42°洋河蓝色经典海之蓝 480ml">
+                                    </a>
+                                </div>
+                                <div class="indexTabTit">
+                                    <a href="" title="52°全兴福运双星500ml">52°全兴福运双星500ml</a>
+                                </div>
+                                <div class="indexTabTitPrice">
+                                    <strong class="red-color">￥25.00</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="indexTabPic">
+                                    <a href="">
+                                        <img src="public/images/a6c58fc81ed245d4b97b0d9afeab6bfa2.jpg" alt="" title="42°洋河蓝色经典海之蓝 480ml">
+                                    </a>
+                                </div>
+                                <div class="indexTabTit">
+                                    <a href="" title="52°全兴福运双星500ml">52°全兴福运双星500ml</a>
+                                </div>
+                                <div class="indexTabTitPrice">
+                                    <strong class="red-color">￥25.00</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="indexTabPic">
+                                    <a href="">
+                                        <img src="public/images/a6c58fc81ed245d4b97b0d9afeab6bfa2.jpg" alt="" title="42°洋河蓝色经典海之蓝 480ml">
+                                    </a>
+                                </div>
+                                <div class="indexTabTit">
+                                    <a href="" title="52°全兴福运双星500ml">52°全兴福运双星500ml</a>
+                                </div>
+                                <div class="indexTabTitPrice">
+                                    <strong class="red-color">￥25.00</strong>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="raceListWrap">
+                            <i class="btnL">
 
+                            </i>
+                            <i class="btnR">
+                                
+                            </i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

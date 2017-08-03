@@ -51,7 +51,18 @@ $(window).ready(function () {
     $(".indexTabNewCon").first().show();
     $(".mainRight-info>ul>li").on("mouseenter",function () {
         $(this).addClass("on").siblings().removeClass("on");
-        idx = $(this).index()
+        idx = $(this).index();
         $(".indexTabNewCon").eq(idx).show().siblings(".indexTabNewCon").hide();
     })
+//小轮播图时间间隔
+    $('.carousel').carousel({
+        interval: 2000,
+    })
+
+
+
+
+
+
+
 });

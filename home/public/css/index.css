@@ -5,7 +5,7 @@ html,body,ul{
     font-size: 12px;
     color: #999999;
 }
-h1,h2,h3,h4,h5,h6,p,span{
+h1,h2,h3,h4,h5,h6,p,span,ol{
     margin: 0;
     padding: 0;
 }
@@ -590,12 +590,14 @@ body{
     float: left;
 
 }
-.slideIndex{
+.mainRight-slide .carousel-indicators{
     position: absolute;
     left: 15px;
     bottom: 10px;
+    margin: 0;
+    padding: 0;
 }
-.slideIndex li{
+.carousel .carousel-indicators li{
     float: left;
     width: 12px;
     height: 12px;
@@ -607,6 +609,71 @@ body{
     border-radius: 50%;
     cursor: pointer;
 }
-.slideIndex>.bg{
-    background-color: #6d81ae;
+.mainRight-slide .carousel-indicators .active{
+    background-color: #6d81ae !important;
+}
+/*底部广告*/
+.mainBottom{
+    overflow: hidden;
+    margin-top: 20px;
+    height: 130px;
+    background: url("../images/3e10d982023545ddb5cbb34d6995a42d.jpg") no-repeat top center;
+}
+.mainBottom a{
+    display: inline-block;
+    margin-left: 90px;
+}
+/*优惠推荐*/
+.recommend{
+
+    margin-top: 10px;
+}
+.recommend-title{
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 3px;
+}
+.recommend-title-left{
+    height: 40px;
+    float: left;
+}
+.recommend-title-left i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    background-position: 0 0;
+}
+.recommend-title-left span{
+    font-size: 17px;
+    color: #333;
+    margin-left: 35px;
+}
+.recommend-title-right{
+    float: right;
+}
+.recommend-title-right ul li{
+    float: left;
+    margin-top: 20px;
+    margin-left: 14px;
+    width: 9px;
+    height: 9px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.newIndexIcon{
+
+    background: url("../images/newIndexIcon-24.png");
+}
+.recommend-item-list{
+    padding: 0 5px;
+}
+.recommend-item ul li{
+    float: left;
+    width: 198px;
+    padding: 10px 0;
+    background-color: #fff;
 }
