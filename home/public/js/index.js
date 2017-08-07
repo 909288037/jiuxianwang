@@ -110,12 +110,113 @@ $(window).ready(function () {
         },1000)
     }
 
+//官方推荐tab滑块效果
+   var liArr =  $(".brandPromotion .recommend-title-left ul li");
+    $(".logoBox").eq(0).show();
+    liArr.hover(function () {
+        $(this).addClass("red-color").siblings().removeClass("red-color");
+        idx = $(this).index();
+        $(".logoBox").eq(idx).show().siblings(".logoBox").hide();
+    //    滑块效果
+        $(".titleSlider").stop().animate({left:idx*liArr.width()},300)
+    })
+//    触碰商标滑动特效
+    $(".logoBox li").mouseenter(function () {
+        $(this).find("a img").stop().animate({marginLeft:"-100px"});
+    });
+    $(".logoBox li").mouseleave(function () {
+        $(this).find("a img").stop().animate({marginLeft:"0"});
+    })
 
+//右边固定栏显示
+    $(".l5").mouseenter(function () {
+        $(this).find("div").show();
+    });
+    $(".l5").mouseleave(function () {
+        $(this).find("div").hide();
+    });
+    $(".l6").mouseenter(function () {
+        $(this).find("div").show();
+    });
+    $(".l6").mouseleave(function () {
+        $(this).find("div").hide();
+    });
 
+//    回滚顶部
+    $(".l7").click(function () {
+        $("body").animate({scrollTop:0},500)
+    })
+//左侧楼层导航
+    $(".fixDiv li i").css({opacity:1}).siblings().css({opacity:0});
+//     $(".floorOneOn").show().siblings().hide();
 
+    $(".fixDiv li").on("mouseenter",function () {
+        $(this).find("a:last-child").stop().animate({opacity:1,width:"70px"});
+    });
+    $(".fixDiv li").on("mouseleave",function () {
+        $(this).find("a").stop().animate({width:"30px",opacity:0}).siblings("i").css({opacity:1});
+    });
+    $(".floorBack").click(function () {
+        $("body").animate({scrollTop:0},500);
+    });
+    //获取各楼层距离
+    var floor1 = $("#1F").offset().top-200;
+    var floor2 = $("#2F").offset().top-200;
+    var floor3 = $("#3F").offset().top-200;
+    var floor4 = $("#4F").offset().top-200;
+    var floor5 = $("#5F").offset().top-200;
+    var scrollT;
+    console.log(floor1);
+    $(".floorOne").on("click",function () {
+        $("html,body").animate({scrollTop:floor1},500);
+        $(".floorOneOn").css({opacity:1}).siblings().css({opacity:0});
+    });
+    $(".floorTwo").click(function () {
+        $("html,body").animate({scrollTop:floor2},500);
+        $(this).find(".floorTwoOn").css({opacity:1}).siblings().css({opacity:0});
+    });
+    $(".floorThree").click(function () {
+        $("html,body").animate({scrollTop:floor3},500);
+        $(this).find(".floorThreeOn").css({opacity:1}).siblings().css({opacity:0});
+    });
+    $(".floorFour").click(function () {
+        $("html,body").animate({scrollTop:floor4},500);
+        $(this).find(".floorFourOn").css({opacity:1}).siblings().css({opacity:0});
+    });
+    $(".floorFive").click(function () {
+        $("html,body").animate({scrollTop:floor5},500);
+        $(this).find(".floorFiveOn").css({opacity:1}).siblings().css({opacity:0});
+    });
+    $(window).scroll(function () {
+         scrollT = $(window).scrollTop();
+        console.log(scrollT);
+        if(scrollT >= 1100){
+            $(".fixDiv ul li").stop().show().animate({margin:"0"});
+        }else {
+            $(".fixDiv ul li").stop().hide().animate({margin:"30px 0"});
+        }
+        if(scrollT >= 1300&&scrollT < floor2){
+            $(".fixDiv li a").css({opacity:0}).siblings("i").css({opacity:1});
+            $(".fixDiv li .floorOneOn").css({opacity:1}).siblings().css({opacity:0});
 
+        }else if(scrollT >= floor2&&scrollT <floor3){
+            $(".fixDiv li a").css({opacity:0}).siblings("i").css({opacity:1});
+            $(".fixDiv li .floorTwoOn").css({opacity:1}).siblings().css({opacity:0});
+        }
+        else if(scrollT >= floor3&& scrollT < floor4){
+            $(".fixDiv li a").css({opacity:0}).siblings("i").css({opacity:1});
+            $(".fixDiv li .floorThreeOn").css({opacity:1}).siblings().css({opacity:0});
+        }
+        else if(scrollT >= floor4&& scrollT < floor5){
+            $(".fixDiv li a").css({opacity:0}).siblings("i").css({opacity:1});
+            $(".fixDiv li .floorFourOn").css({opacity:1}).siblings().css({opacity:0});
+        }
+        else if(scrollT >= floor5 && scrollT<5100){
+            $(".fixDiv li a").css({opacity:0}).siblings("i").css({opacity:1});
+            $(".fixDiv li .floorFiveOn").css({opacity:1}).siblings().css({opacity:0});
+        }else {
+            $(".fixDiv li a").css({opacity:0}).siblings("i").css({opacity:1});
+        }
 
-
-
-
+    });
 });
